@@ -12,6 +12,8 @@ public class C_Player : MonoBehaviour
     public bool isFacingRight = true;
     public bool isMovingRight;
     public bool isMovingLeft;
+    public bool isAddingLeft;
+    public bool isAddingRight;
 
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField] private Transform groundCheck;
