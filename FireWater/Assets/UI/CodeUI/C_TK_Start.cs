@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class C_TK_Start : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Button _butStart;
+
+    private C_SwitchScreens _switchScreens;
+    
     void Start()
     {
+        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         
+        _butStart = root.Q<Button>("but_restart");
+        
+        _butStart.clicked += StartGame;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StartGame()
     {
-        
+        _switchScreens.OpenPlaying();
     }
+
 }
+
