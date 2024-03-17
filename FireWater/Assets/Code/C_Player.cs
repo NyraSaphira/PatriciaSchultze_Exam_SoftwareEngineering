@@ -1,29 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-
 
 public class C_Player : MonoBehaviour
 {
 
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 37f;
-    protected bool isFacingRight = true;
-    protected bool isMovingRight;
-    protected bool isMovingLeft;
-    protected bool isAddingLeft;
-    protected bool isAddingRight;
+    protected bool IsFacingRight = true;
+    protected bool IsMovingRight;
+    protected bool IsMovingLeft;
+    protected bool IsAddingLeft;
+    protected bool IsAddingRight;
 
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     
-    void Start()
-    {
-        
-    }
-
     protected void MoveUp()
     {
         if(IsGrounded()) playerBody.velocity = new Vector2(playerBody.velocity.x, jumpingPower);
@@ -31,39 +22,39 @@ public class C_Player : MonoBehaviour
     }
     protected void MoveLeft()
     {
-        isMovingLeft = true;
+        IsMovingLeft = true;
         playerBody.velocity = new Vector2(-speed, playerBody.velocity.y);
         //playerBody.position = new Vector2(playerBody.position.x-speed, playerBody.position.y);
-        if(isFacingRight) Flip();
+        if(IsFacingRight) Flip();
     }
     protected void MoveRight()
     {
-        isMovingRight = true;
+        IsMovingRight = true;
         playerBody.velocity = new Vector2(speed, playerBody.velocity.y);
         //playerBody.position = new Vector2(playerBody.position.x+speed, playerBody.position.y);
-        if(!isFacingRight) Flip();
+        if(!IsFacingRight) Flip();
     }
     
     protected void StopMovingLeft()
     {
-        isMovingLeft = false;
+        IsMovingLeft = false;
         StopMoving();
     }
     protected void StopMovingRight()
     {
-        isMovingRight = false;
+        IsMovingRight = false;
         StopMoving();
     }
     public void StopMoving()
     {
         playerBody.velocity = new Vector2(0, playerBody.velocity.y);
-        if(!isFacingRight) Flip();
+        if(!IsFacingRight) Flip();
     }
     
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
+        IsFacingRight = !IsFacingRight;
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;

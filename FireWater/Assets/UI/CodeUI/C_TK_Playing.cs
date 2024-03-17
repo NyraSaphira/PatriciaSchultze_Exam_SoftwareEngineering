@@ -12,9 +12,7 @@ public class C_TK_Playing : MonoBehaviour
     
     private int _waterDiamondsCurrent;
     private int _fireDiamondsCurrent;
-
-    [SerializeField] private C_DiamondWater diamondWater;
-    [SerializeField] private C_DiamondFire diamondFire;
+    
     
 public UnityEvent onWaterDiasCollected;
 public UnityEvent onFireDiasCollected;
@@ -37,7 +35,11 @@ public UnityEvent onFireDiasCollected;
     {
         _waterDiamondsCurrent++;
         WaterCounterDisplay();
-        if (_waterDiamondsCurrent >= _waterDiamondsMax) onWaterDiasCollected?.Invoke();
+        if (_waterDiamondsCurrent >= _waterDiamondsMax)
+        {
+            C_AlwaysThere.AllWaterDias = true;
+            onWaterDiasCollected?.Invoke();
+        }
     }
     
     private void WaterCounterDisplay()
@@ -49,7 +51,11 @@ public UnityEvent onFireDiasCollected;
     {
         _fireDiamondsCurrent++;
         FireCounterDisplay();
-        if (_fireDiamondsCurrent >= _fireDiamondsMax) onFireDiasCollected?.Invoke();
+        if (_fireDiamondsCurrent >= _fireDiamondsMax)
+        {
+            C_AlwaysThere.AllFireDias = true;
+            onFireDiasCollected?.Invoke();
+        }
     }
     
     private void FireCounterDisplay()

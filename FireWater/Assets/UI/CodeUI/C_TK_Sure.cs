@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 
 public class C_TK_Sure : MonoBehaviour
 {
@@ -27,7 +26,7 @@ public class C_TK_Sure : MonoBehaviour
 
     private void Yes()
     {
-        Application.Quit();                              //for biulds
+        Application.Quit();                              //for builds
         UnityEditor.EditorApplication.isPlaying = false; //for exiting play mode
     }
 

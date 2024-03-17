@@ -1,4 +1,3 @@
-using UnityEngine.Events;
 using UnityEngine;
 
 public class C_FireFinish : MonoBehaviour

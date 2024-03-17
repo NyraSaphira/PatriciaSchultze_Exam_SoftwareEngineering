@@ -13,7 +13,6 @@ public class C_SwitchScreens : MonoBehaviour
 
     private UIDocument _activeDocument;
     
-
     private bool _sureIsOpen;
     
     void Start()
@@ -58,7 +57,7 @@ public class C_SwitchScreens : MonoBehaviour
         tkSure.gameObject.SetActive(false);
     } 
     
-    public void OpenStart()
+    private void OpenStart()
     {
         _activeDocument.gameObject.SetActive(false);
         _activeDocument = tkStart;
