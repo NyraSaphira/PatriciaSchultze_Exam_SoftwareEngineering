@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class C_TK_Playing : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class C_TK_Playing : MonoBehaviour
     [SerializeField] private C_DiamondWater diamondWater;
     [SerializeField] private C_DiamondFire diamondFire;
     
+public UnityEvent onWaterDiasCollected;
+public UnityEvent onFireDiasCollected;
     void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -35,7 +37,7 @@ public class C_TK_Playing : MonoBehaviour
     {
         _waterDiamondsCurrent++;
         WaterCounterDisplay();
-        if (_waterDiamondsCurrent >= _waterDiamondsMax) ; //Open Door
+        if (_waterDiamondsCurrent >= _waterDiamondsMax) onWaterDiasCollected?.Invoke();
     }
     
     private void WaterCounterDisplay()
@@ -47,7 +49,7 @@ public class C_TK_Playing : MonoBehaviour
     {
         _fireDiamondsCurrent++;
         FireCounterDisplay();
-        if (_fireDiamondsCurrent >= _fireDiamondsMax) ; //Open Door
+        if (_fireDiamondsCurrent >= _fireDiamondsMax) onFireDiasCollected?.Invoke();
     }
     
     private void FireCounterDisplay()

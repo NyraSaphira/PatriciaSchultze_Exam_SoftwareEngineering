@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/USS/General.uss?fileID=7433441132597879392&amp;guid=d307f68ea2f042f4eaff8131e1a5f7f6&amp;type=3#General" />
-    <ui:VisualElement name="vis_start" class="vis_first" style="background-color: rgba(0, 0, 0, 0.23);">
+    <ui:VisualElement name="vis_start" class="vis_first" style="background-color: rgba(0, 0, 0, 0.65);">
         <ui:Button text="Click to Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="but_start" style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; font-size: 53px; -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(255, 255, 255, 0); -unity-font-style: bold; text-shadow: 1.3px 0.7px 0 rgb(255, 255, 255);" />
     </ui:VisualElement>
 </ui:UXML>

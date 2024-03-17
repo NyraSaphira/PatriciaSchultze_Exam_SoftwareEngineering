@@ -9,7 +9,7 @@ public class C_TK_Dead_Finish : MonoBehaviour
     private Button _butRestart;
     private Button _butQuit;
 
-    public UnityEvent onDeath;
+    public UnityEvent onEnd;
 
    [SerializeField] C_SwitchScreens switchScreens;
     
@@ -22,8 +22,8 @@ public class C_TK_Dead_Finish : MonoBehaviour
         
         _butQuit.clicked += Quit;
         _butRestart.clicked += Restart;
-
-        onDeath?.Invoke();
+        
+        onEnd?.Invoke();
     }
 
     private void Quit()

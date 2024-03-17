@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class C_Fire : C_Player
 {
-    [SerializeField] C_TK_Dead_Finish deadFinish;
-    
-    void Start()
-    {
-        deadFinish.onDeath.AddListener(StopMoving);
-    }
-
-    
     void Update()
     {
         if (!C_AlwaysThere.MovementStop)

@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class C_Water : C_Player
 {
-    [SerializeField] C_TK_Dead_Finish deadFinish;
-    void Start()
-    {
-        deadFinish.onDeath.AddListener(StopMoving); //onDeath.RemoveAllListeners //oder satt diese zeile im inspector
-    }
-
     // Update is called once per frame
     void Update()
     {
