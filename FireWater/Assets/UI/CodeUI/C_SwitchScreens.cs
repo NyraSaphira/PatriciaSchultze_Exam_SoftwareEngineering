@@ -61,7 +61,7 @@ public class C_SwitchScreens : MonoBehaviour
     public void OpenStart()
     {
         _activeDocument.gameObject.SetActive(false);
-        _activeDocument = tkSure;
+        _activeDocument = tkStart;
         _activeDocument.gameObject.SetActive(true);
         MovementStop();
     } 

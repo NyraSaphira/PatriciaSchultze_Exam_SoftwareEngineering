@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class C_TK_Dead_Finish : MonoBehaviour
 {
     private Button _butRestart;
     private Button _butQuit;
 
-    private C_SwitchScreens _switchScreens;
+    public UnityEvent onDeath;
+
+   [SerializeField] C_SwitchScreens switchScreens;
     
-    void Start()
+    void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         
@@ -18,11 +22,13 @@ public class C_TK_Dead_Finish : MonoBehaviour
         
         _butQuit.clicked += Quit;
         _butRestart.clicked += Restart;
+
+        onDeath?.Invoke();
     }
 
     private void Quit()
     {
-        _switchScreens.OpenSure();
+        switchScreens.OpenSure();
     }
 
     private void Restart()

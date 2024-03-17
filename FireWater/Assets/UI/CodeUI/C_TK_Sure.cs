@@ -7,14 +7,14 @@ public class C_TK_Sure : MonoBehaviour
     private Button _butYes;
     private Button _butNo;
 
-    private C_SwitchScreens _switchScreens;
+    [SerializeField] C_SwitchScreens switchScreens;
     
-    void Start()
+    void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         
-        _butYes = root.Q<Button>("but_restart");
-        _butNo = root.Q<Button>("but_quit");
+        _butYes = root.Q<Button>("but_yes");
+        _butNo = root.Q<Button>("but_no");
         
         _butNo.clicked += No;
         _butYes.clicked += Yes;
@@ -22,7 +22,7 @@ public class C_TK_Sure : MonoBehaviour
 
     private void No()
     {
-        _switchScreens.CloseSure();
+        switchScreens.CloseSure();
     }
 
     private void Yes()
