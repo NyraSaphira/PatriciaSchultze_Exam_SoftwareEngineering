@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/General.uss?fileID=7433441132597879392&amp;guid=d307f68ea2f042f4eaff8131e1a5f7f6&amp;type=3#General" />
+    <ui:VisualElement class="vis_first" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 0; align-items: center; justify-content: center; height: 50%; width: 27%; background-color: rgba(55, 65, 103, 0.36); border-top-left-radius: 56px; border-top-right-radius: 56px; border-bottom-right-radius: 56px; border-bottom-left-radius: 56px;">
+            <ui:Label tabindex="-1" text="You won!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 31px; top: -27px;" />
+            <ui:Button text="Play Again" parse-escape-sequences="true" display-tooltip-when-elided="true" name="but_restart" class="but_dead" />
+            <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="but_quit" class="but_dead" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

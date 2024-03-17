@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: b848171e12a47e24bbfe5e5fb910eb16, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 97cdb0b5c5a28514cb25c681b8dc5a37, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 89bc3489e00a34f4a9d18052feca5270, type: 3}
   m_SortingOrder: 0
 --- !u!1001 &688712280
 PrefabInstance:
@@ -609,6 +609,8 @@ MonoBehaviour:
   isFacingRight: 1
   isMovingRight: 0
   isMovingLeft: 0
+  isAddingLeft: 0
+  isAddingRight: 0
   playerBody: {fileID: 1015631393}
   groundCheck: {fileID: 239840968}
   groundLayer:
@@ -629,6 +631,8 @@ MonoBehaviour:
   isFacingRight: 1
   isMovingRight: 0
   isMovingLeft: 0
+  isAddingLeft: 0
+  isAddingRight: 0
   playerBody: {fileID: 1015631393}
   groundCheck: {fileID: 1015631392}
   groundLayer:
@@ -754,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: b848171e12a47e24bbfe5e5fb910eb16, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 83d3fc8f819378044a6c67bf793a8c1c, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 3522d52813e91464dbf2e85216c31944, type: 3}
   m_SortingOrder: 0
 --- !u!1 &1488792251
 GameObject:

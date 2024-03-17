@@ -5,3 +5,25 @@
     justify-content: center;
     align-items: center;
 }
+
+.but_dead {
+    font-size: 24px;
+    width: 145px;
+    margin-top: 13px;
+}
+
+.vis_diamond {
+    flex-grow: 1;
+    height: 100%;
+    width: 49px;
+    background-color: rgb(107, 137, 197);
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.txt_dia {
+    align-self: center;
+    font-size: 30px;
+}
