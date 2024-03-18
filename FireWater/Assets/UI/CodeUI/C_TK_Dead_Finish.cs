@@ -22,7 +22,8 @@ public class C_TK_Dead_Finish : MonoBehaviour
         
         _butQuit.clicked += Quit;
         _butRestart.clicked += Restart;
-        
+
+        Debug.Log("lalal");
         onEnd?.Invoke();
     }
 
@@ -33,6 +34,10 @@ public class C_TK_Dead_Finish : MonoBehaviour
 
     private void Restart()
     {
+        C_AlwaysThere.FireInFinish = false;
+        C_AlwaysThere.WaterInFinish = false;
+        C_AlwaysThere.AllFireDias = false;
+        C_AlwaysThere.AllFireDias = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

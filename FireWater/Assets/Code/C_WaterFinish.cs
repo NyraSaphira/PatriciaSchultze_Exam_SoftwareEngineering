@@ -6,6 +6,7 @@ public class C_WaterFinish : MonoBehaviour
     public UnityEvent onFinish;
     [SerializeField] private Color newColor;
     private SpriteRenderer _spriteRenderer;
+    private bool _finished;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +19,11 @@ public class C_WaterFinish : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (C_AlwaysThere.WaterInFinish && C_AlwaysThere.FireInFinish) onFinish?.Invoke();
+        if (C_AlwaysThere.WaterInFinish && C_AlwaysThere.FireInFinish && !_finished)
+        {
+            _finished = true;
+            onFinish?.Invoke();
+        }
     }
     
 

@@ -7,4 +7,5 @@ public static class C_AlwaysThere
     
     public static bool WaterInFinish;
     public static bool FireInFinish;
+    
 }
