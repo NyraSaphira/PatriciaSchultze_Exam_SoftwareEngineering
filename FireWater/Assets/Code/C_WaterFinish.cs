@@ -9,7 +9,7 @@ public class C_WaterFinish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Water" && C_AlwaysThere.AllWaterDias) C_AlwaysThere.WaterInFinish = true;
+        if (other.gameObject.name == "Water" && C_AlwaysThere.AllWaterDias)C_AlwaysThere.WaterInFinish = true;
     }
     private void OnTriggerExit2D(Collider2D other)
     {
