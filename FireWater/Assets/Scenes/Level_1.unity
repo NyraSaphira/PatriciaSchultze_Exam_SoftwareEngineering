@@ -2618,7 +2618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca883cbf6ea1444f8d3b79f0b0ff940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0.58431375, g: 0.10980393, b: 0.050980397, a: 0}
+  newColor: {r: 0.58431375, g: 0.10980393, b: 0.050980397, a: 1}
 --- !u!61 &1505950510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2867,17 +2867,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8777957224968600614, guid: ed7984c6a8c99224bb1f86e9680eb90f, type: 3}
   m_PrefabInstance: {fileID: 1592618889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1644398164 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1443737119578216773, guid: 900a6d0a762d3554abfcc2fb813be545, type: 3}
-  m_PrefabInstance: {fileID: 1545187107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e8bb570eaf2b5468c9e7a5e18762ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1644398167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8099172016001715087, guid: 900a6d0a762d3554abfcc2fb813be545, type: 3}
@@ -3387,8 +3376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba568fc4bfd642a8a4a3e0d168021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diamondWater: {fileID: 1958096487}
-  diamondFire: {fileID: 1644398164}
   onWaterDiasCollected:
     m_PersistentCalls:
       m_Calls:
@@ -3435,17 +3422,6 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 11db8cbe210be194ba8bba2f7f560644, type: 3}
   m_SortingOrder: 1
---- !u!114 &1958096487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6573625216060546793, guid: 79df42335f36fc14d8b65656f5735dd7, type: 3}
-  m_PrefabInstance: {fileID: 1385709507}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08928cfd9b8b894a91bf56d388c760d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1958096490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5337945023206974324, guid: 79df42335f36fc14d8b65656f5735dd7, type: 3}
